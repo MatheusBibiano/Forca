@@ -14,6 +14,37 @@
 """
 
 from os import system
+from sys import platform
+
+
+def clear():
+    """
+    Limpa a tela do terminal.
+    """
+    if platform == "linux" or platform == "linux2":
+        system("clear")
+
+    elif platform == "darwin":
+        system("clear")
+
+    elif platform == "win32":
+        system("cls")
+
+
+def pause():
+    """
+    Pause a execução do programa.
+    """
+    if platform == "linux" or platform == "linux2":
+        system("echo Enter para continuar...")
+        system("read enter")
+
+    elif platform == "darwin":
+        system("echo Enter para continuar...")
+        system("read enter")
+
+    elif platform == "win32":
+        system("pause")
 
 
 def find(letter: str, array: str, indexes):
@@ -22,7 +53,7 @@ def find(letter: str, array: str, indexes):
     """
     index = array.find(letter)
     
-    if index is not -1:
+    if index != -1:
         indexes.append(index)
         array = list(array)
         array[index] = '-'
@@ -58,12 +89,12 @@ def handleInput(input: str):
 
 def main():
     word = str(input("\nPALAVRA SECRETA: "))
-    system('cls')
+    clear()
     
     while len(word) < 2:
         print("[!] INSIRA UMA PALAVRA!")
         word = str(input("PALAVRA SECRETA: "))
-        system('cls')
+        clear()
 
     word = handleInput(word)
 
@@ -94,8 +125,8 @@ def main():
                     if attempt in typed_letters:
                         lifes -= 1
                         print("JÁ FOI UTILIZADA!")
-                        system('pause')
-                        system('cls')
+                        pause()
+                        clear()
                     
                     else:
                         indexes_found = find(attempt, word, [])
@@ -112,31 +143,31 @@ def main():
 
                             if check_word.isalpha():
                                 win = True
-                                system('pause')
-                                system('cls')
+                                pause()
+                                clear()
                                 print("PARABÊNS! VOCÊ GANHOU!")
 
-                            system('pause')
-                            system('cls')
+                            pause()
+                            clear()
                             
                         else:
                             lifes -= 1
                             print("ERROU!")
-                            system('pause')
-                            system('cls')
+                            pause()
+                            clear()
 
                         typed_letters.append(attempt)
 
                 else:
                     print("[!] SUA ENTRADA NÃO SEGUE OS CRITÉRIOS!")
-                    system('pause')
-                    system('cls')
+                    pause()
+                    clear()
 
             else:
                 lose = True
                 print("VOCÊ PERDEU!")
-                system('pause')
-                system('cls')
+                pause()
+                clear()
 
     else:
         print("[!] SUA ENTRADA NÃO SEGUE OS CRITÉRIOS!")
