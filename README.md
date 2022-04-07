@@ -56,11 +56,11 @@ A seguinte tecnologia foi utilizada na construção do projeto:
 - [Python](https://www.python.org/)
 
 ### Autor
-<img src="assets/author.png" width="150" height="150">
 
-Matheus Bibiano Alves
-
-[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/matheus-bibiano-alves) [<img src = "https://img.shields.io/badge/facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white">](https://www.facebook.com/matheus.bibiano1/) [<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />](https://twitter.com/Bibiano_Alves)
+| Matheus Bibiano                                       |
+|-------------------------------------------------------|
+| <img src="assets/author.png" width="150" height="150">|
+| [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/matheus-bibiano-alves)|
 
 ### Licença
 
